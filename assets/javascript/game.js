@@ -1,78 +1,84 @@
+window.onload = function() {
 
-
-
-
-//Variables
-var alphabet = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"];
+var alphabet = ['a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z'];
 var guessedLetters = [];
-var lives;
 var words = ["biology", "chemistry", "physics"];
-var hints = ["study of life", "study of matter", "study of the nature of matter"];
-var newWord = 0;
 var wins = 0;
-var randomNumber = Math.floor(Math.random() * words.length);
-var currentWord = words[randomNumber];
-var currentHint= hints[randomNumber];
-var wordLength = currentWord.length;
-var userGuess =  "s";
-var blanks = "";
-var replace =[]; //contains locations of letters that need to be replaced
+var losses = 0
+var userGuess = event.key;
+var lives = 9;
 
-function blankSpaces (currentWord) {
-	for (var i in currentWord) {
-		blanks += "_";
+var resetGame = function() {
+	answerArray = [];
+	guessedLetters = [];
+	lives = 9;
+	newWord = words[Math.floor(Math.random() * words.length)];
+	remainingLetters = newWord.length;
+	showBlanks();
+	document.getElementById("blanks").innerHTML = 'Current Word: ' + answerArray.join(' ');
+	document.getElementById('lives').innerHTML = 'Lives: ' + lives;
+	document.getElementById("guessed").innerHTML = 'Already Guessed: ';
+};
+
+var showBlanks = function () {
+	for (var i =0; i < newWord.length; i++){
+	answerArray[i] = '_';	
 	}
-	return blanks;
+return answerArray
 }
 
 
-function replaceAt(match, userInput) {
-	return blanks.substr(0, match) + userInput + blanks.substr(match+1, blanks.length);
-}
+//Game Play
+var guessWord = function () {
+var userGuess = event.key;
 
-function getReplacePositions(currentWord, userInput){
-	var searchIndex = currentWord.indexOf(userGuess);
-	while (searchIndex != -1) {
-		replace.push(searchIndex);
-		searchIndex = currentWord.indexOf(userGuess, searchIndex + 1);
+		if (alphabet.includes(userGuess) === false){
+			return;
+		}
+		else if (guessedLetters.includes(userGuess) === true){
+			return;
+		}
+		else if (answerArray.includes(userGuess) === true){
+			return;
+		}
+		
+		for (var j =0; j < newWord.length; j++) {
+			if (newWord[j]=== userGuess) {
+				answerArray[j] = userGuess;
+				remainingLetters--;
+				console.log(remainingLetters)
+				
+		}			
+		}
+		if (newWord.indexOf(userGuess) === -1) { 
+				guessedLetters.push(userGuess);
+				lives--;	
+		}
+		if (remainingLetters === 0){
+			win();
+		}
+		if (lives === 0) {
+			lose();
+		}
+
+	document.getElementById("blanks").innerHTML = 'Current Word: ' + answerArray.join(' ');
+	document.getElementById("guessed").innerHTML = 'Already Guessed: ' + guessedLetters.join(' ');
+	document.getElementById('lives').innerHTML = 'Lives: ' + lives;
 	}
+
+function win () {wins++; alert('You win!'); resetGame();}
+function lose () {losses++; alert('game over'); resetGame();}
+
+
+
+document.onkeyup = function(event) {
+	var userGuess = event.key;
+	guessWord();
 }
-function replaceLetter(){
-	var searchIndex = -1;
-	var searchIndex = currentWord.indexOf(userGuess);
-		while (searchIndex >= 0) {
-			var replaced = replaceAt(searchIndex, userGuess);	
-			searchIndex = currentWord.indexOf(userGuess, searchIndex + 1);
-		}	
-		return replaced;
-	}	
-	
 
 
-blankSpaces(currentWord);
-console.log(replaceLetter());
+resetGame();
 
-console.log(replace);
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+}
 
 
