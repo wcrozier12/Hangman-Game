@@ -1,4 +1,67 @@
-#letters {
-	border-bottom: 1px solid black;
-	display: inline-block;
+body {
+	background:black;
 }
+
+#hangman {
+	text-align:center;
+	color:silver;
+	font-family: 'Righteous', cursive;
+	font-size: 160px;
+	position:relative;
+	bottom: 50px;
+
+}
+.well-lg {
+	height:350px;
+	background-color:silver;
+}
+#scienceheader {
+	width:20%;
+	height:100px;
+	position:relative;
+	left: 875px;
+	bottom:100px;
+	transform: rotate(-15deg);
+
+}
+
+.container-fluid{
+	height:300px;
+	background-image: url('../images/spacebackground.jpg')
+}
+
+p {
+	position:relative;
+	bottom:120px;
+	text-align:center;
+	font-family: 'Righteous', cursive;
+	color:blue;
+}
+
+.intro{
+	font-family: 'Righteous', cursive;
+	color:silver;
+}
+
+#winimage {
+	width:100%;
+	height:100%;
+}
+.row {
+	font-family: 'Righteous', cursive;
+	font-size: 24px;
+	text-align:center;
+	margin: 40px 0px 40px 0px;
+}
+
+.winloss {
+	font-family: 'Righteous', cursive;
+	font-size: 24px;
+	position:relative;
+	display:inline-block;
+	text-align:center;
+
+}
+
+
+
