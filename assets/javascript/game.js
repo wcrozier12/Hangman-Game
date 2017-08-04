@@ -4,54 +4,54 @@ window.onload = function() {
 var imgArray = new Array();
 
 imgArray[0] = new Image();
-imgArray[0].src = '../Hangman-game/assets/images/biologyImage.jpeg';
+imgArray[0].src = '../Hangman-Game/assets/images/biologyImage.jpeg';
 
 imgArray[1] = new Image();
-imgArray[1].src = '../Hangman-game/assets/images/chemistryImage.jpg';
+imgArray[1].src = '../Hangman-Game/assets/images/chemistryImage.jpg';
 
 imgArray[2] = new Image();
-imgArray[2].src = '../Hangman-game/assets/images/physicsImage.jpg';
+imgArray[2].src = '../Hangman-Game/assets/images/physicsImage.jpg';
 
 imgArray[3] = new Image();
-imgArray[3].src = '../Hangman-game/assets/images/enzyme.jpeg';
+imgArray[3].src = '../Hangman-Game/assets/images/enzyme.jpeg';
 
 imgArray[4] = new Image();
-imgArray[4].src = '../Hangman-game/assets/images/photosynthesis.jpg';
+imgArray[4].src = '../Hangman-Game/assets/images/photosynthesis.jpg';
 
 imgArray[5] = new Image();
-imgArray[5].src = '../Hangman-game/assets/images/glycolysis.jpg';
+imgArray[5].src = '../Hangman-Game/assets/images/glycolysis.jpg';
 
 imgArray[6] = new Image();
-imgArray[6].src = '../Hangman-game/assets/images/mitosis.jpg';
+imgArray[6].src = '../Hangman-Game/assets/images/mitosis.jpg';
 
 imgArray[7] = new Image();
-imgArray[7].src = '../Hangman-game/assets/images/solvent.jpg';
+imgArray[7].src = '../Hangman-Game/assets/images/solvent.jpg';
 
 imgArray[8] = new Image();
-imgArray[8].src = '../Hangman-game/assets/images/nucleus.jpg';
+imgArray[8].src = '../Hangman-Game/assets/images/nucleus.jpg';
 
 imgArray[9] = new Image();
-imgArray[9].src = '../Hangman-game/assets/images/ohm.jpg';
+imgArray[9].src = '../Hangman-Game/assets/images/ohm.jpg';
 
 imgArray[10] = new Image();
-imgArray[10].src = '../Hangman-game/assets/images/photon.jpg';
+imgArray[10].src = '../Hangman-Game/assets/images/photon.jpg';
 
 imgArray[11] = new Image();
-imgArray[11].src = '../Hangman-game/assets/images/gluconeogenesis.jpg';
+imgArray[11].src = '../Hangman-Game/assets/images/gluconeogenesis.jpg';
 
 imgArray[12] = new Image();
-imgArray[12].src = '../Hangman-game/assets/images/lipid.jpg';
+imgArray[12].src = '../Hangman-Game/assets/images/lipid.jpg';
 
 imgArray[13] = new Image();
-imgArray[13].src = '../Hangman-game/assets/images/virus.jpg';
+imgArray[13].src = '../Hangman-Game/assets/images/virus.jpg';
 
 imgArray[14] = new Image();
-imgArray[14].src = '../Hangman-game/assets/images/atp.png';
+imgArray[14].src = '../Hangman-Game/assets/images/atp.png';
 
 imgArray[15] = new Image();
-imgArray[15].src = '../Hangman-game/assets/images/evolution.jpg';
+imgArray[15].src = '../Hangman-Game/assets/images/atp.jpg';
 
-var audio = new Audio('../Hangman-game/assets/audio/blindedMeWithScience.mp3');
+var audio = new Audio('../Hangman-Game/assets/audio/blindedMeWithScience.mp3');
 
 var alphabet = ['a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z'];
 var guessedLetters = [];
