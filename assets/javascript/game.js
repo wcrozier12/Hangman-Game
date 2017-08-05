@@ -40,7 +40,7 @@ imgArray[11] = new Image();
 imgArray[11].src = '../Hangman-Game/assets/images/gluconeogenesis.jpg';
 
 imgArray[12] = new Image();
-imgArray[12].src = '../Hangman-Game/assets/images/lipid.jpg';
+imgArray[12].src = '../Hangman-Game/assets/images/lipid.png';
 
 imgArray[13] = new Image();
 imgArray[13].src = '../Hangman-Game/assets/images/virus.jpg';
@@ -49,7 +49,7 @@ imgArray[14] = new Image();
 imgArray[14].src = '../Hangman-Game/assets/images/atp.png';
 
 imgArray[15] = new Image();
-imgArray[15].src = '../Hangman-Game/assets/images/atp.jpg';
+imgArray[15].src = '../Hangman-Game/assets/images/evolution.jpg';
 
 var audio = new Audio('../Hangman-Game/assets/audio/blindedMeWithScience.mp3');
 
